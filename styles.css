@@ -1,0 +1,437 @@
+/* Reset margin & padding asas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tetapan asas HTML & body */
+html, body {
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Badan halaman default (index.html) */
+body {
+    color: white;
+    background-image: url('gambar/ellen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    position: relative;
+    animation: bgScroll 25s ease-in-out infinite alternate;
+}
+
+/* Gaya khas untuk aboutme.html */
+body.about-page {
+    background-image: url('gambar/ellenjoe.jpg'); /* Gambar latar lain */
+    animation: aboutBgScroll 30s ease-in-out infinite alternate;
+}
+
+/* Lapisan gelap supaya teks jelas */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Header kemas */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: transparent;
+}
+
+/* Susun menu secara mendatar dan ke kanan */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+/* Seksyen utama (main) */
+main {
+    padding: 100px 20px 60px;
+    display: block;
+    animation: slideInTop 0.8s ease-out;
+}
+
+/* Semua section dalam main */
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+/* Footer sentiasa di bawah */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(158, 107, 107, 0.6);
+    color: #ccc;
+}
+
+/* Kontainer utama untuk About */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Gaya gambar profil */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Teks bahagian About */
+.about-text {
+    max-width: 600px;
+    color: #fff;
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.about-text h2 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ddd;
+    font-weight: normal;
+}
+
+.about-text strong {
+    color: cyan;
+}
+
+.about-text em {
+    color: #ffcc00;
+}
+
+/* My Services Section */
+.services-box h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: cyan;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+/* Animasi background index.html */
+@keyframes bgScroll {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
+/* Animasi background aboutme.html */
+@keyframes aboutBgScroll {
+    0% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+/* Animasi masuk dari bawah */
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.myservis {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.myservis h2 {
+    font-size: 2.5em;
+    color: cyan;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Gaya badan halaman untuk memastikan footer di bawah */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tetapan utama untuk kandungan */
+main {
+    flex: 1; /* Menjadikan main untuk mengisi ruang yang ada */
+    padding: 20px;
+}
+
+/* Footer sentiasa berada di bawah */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(158, 107, 107, 0.6);
+    color: #ccc;
+    margin-top: auto; /* Memastikan footer sentiasa berada di bawah */
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Sudut lembut */
+}
+
+.services-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.services-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.services-box {
+    flex: 2;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* === Gaya khusus halaman Contact === */
+body.contact-page {
+    background-image: url('gambar/ellen.jpg');
+    animation: bgScroll 20s ease-in-out infinite alternate;
+}
+
+/* Kontainer utama contact */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    max-width: 1000px;
+    margin: auto;
+    color: #fff;
+}
+
+/* Bahagian kiri dengan gambar */
+.contact-left img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Bahagian kanan - borang dan info */
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-right h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-right button {
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: cyan;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-right button:hover {
+    background-color: #00e0e0;
+}
+
+/* Ikon sosial */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: cyan;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-left img {
+        width: 80%;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00ffee;
+  padding: 16px 28px;
+  color: black;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  font-size: 1.1rem;
+  text-align: center;
+}
+

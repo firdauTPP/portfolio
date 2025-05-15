@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body class="contact-page">
+
+  <header>
+    <h1 class="glow">Jun._.rico</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutme.html">ABOUT</a></li>
+        <li><a href="project.html">PROJECT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <div class="contact-left">
+        <img src="gambar/chibi.jpg" alt="Contact Image">
+      </div>
+      <div class="contact-right">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/EMAILANDA@gmail.com" method="POST" id="contact-form">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <textarea name="message" placeholder="Message" rows="4" required></textarea>
+
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="#">
+
+          <button type="submit">Contact Us</button>
+        </form>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/hiura__mihate" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/601163377120" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@mihate_" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="popup" id="popup">Message sent successfully!</div>
+
+  <footer>
+    <p>&copy; 2025 Laman Utama</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
